@@ -1,0 +1,34 @@
+Usage: terraform [global options] state mv [options] SOURCE DESTINATION
+
+ This command will move an item matched by the address given to the
+ destination address. This command can also move to a destination address
+ in a completely different state file.
+
+ This can be used for simple resource renaming, moving items to and from
+ a module, moving entire modules, and more. And because this command can also
+ move data to a completely new state, it can also be used for refactoring
+ one configuration into multiple separately managed Terraform configurations.
+
+ This command will output a backup copy of the state prior to saving any
+ changes. The backup cannot be disabled. Due to the destructive nature
+ of this command, backups are required.
+
+ If you're moving an item to a different state file, a backup will be created
+ for each state file.
+
+Options:
+
+  -dry-run                If set, prints out what would've been moved but doesn't
+                          actually move anything.
+
+  -lock=false             Don't hold a state lock during the operation. This is
+                          dangerous if others might concurrently run commands
+                          against the same workspace.
+
+  -lock-timeout=0s        Duration to retry a state lock.
+
+  -ignore-remote-version  A rare option used for the remote backend only. See
+                          the remote backend documentation for more information.
+
+  -state, state-out, and -backup are legacy options supported for the local
+  backend only. For more information, see the local backend's documentation.

@@ -1,0 +1,1 @@
+/* fcos ref: https://getfedora.org/coreos/download?tab=cloud_launchable&stream=stable&arch=x86_64 */
